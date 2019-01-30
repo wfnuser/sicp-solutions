@@ -29,10 +29,9 @@
 )
 
 (define (midpoint-segment seg)
-    (let ((s (start-segment seg)))
-        (let ((e (end-segment seg)))
-            (make-point (average-x s e) (average-y s e))
-        )))
+    (let ((s (start-segment seg))
+            (e (end-segment seg)))
+                (make-point (average-x s e) (average-y s e))))
     
 (define (print-point p)
     (newline)
@@ -42,9 +41,8 @@
     (display (y-point p))
     (display ")"))
 
-(let ((p-s (make-point 4 18)))
-    (let ((p-e (make-point 5 19)))
-        (let ((seg (make-segment p-s p-e)))
-            (let (( mid (midpoint-segment seg)))
-                (print-point mid)
-            ))))
+(let* ((p-s (make-point 4 18))
+        (p-e (make-point 5 19))
+        (seg (make-segment p-s p-e))
+        (mid (midpoint-segment seg)))
+                (print-point mid))
