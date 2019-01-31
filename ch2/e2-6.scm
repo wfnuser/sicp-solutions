@@ -8,3 +8,8 @@
 
 (define (plus a b)
     (lambda (f) (lambda (x) ((a f) ((b f) x)))))
+
+(define (test x)
+    (+ x 1))
+
+((two test) 0)
