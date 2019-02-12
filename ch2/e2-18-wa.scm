@@ -27,8 +27,8 @@
 )
 
 (define (reverse items)
-    (if (= 2 (length items))
-        (cons (cdr items) (car items))
+    (if (= 1 (length items))
+        items
         (append (reverse (cdr items)) (car items))
     )
 )
