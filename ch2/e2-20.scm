@@ -1,0 +1,12 @@
+(define (same-parity . numbers)
+    (let ((first (car numbers)) (rest (cdr numbers)))
+        (if (odd? first)
+            (filter odd? numbers)
+            (filter even? numbers)
+        )
+    )
+)
+
+(same-parity 1)
+(same-parity 1 2 3 4 5 6 7)
+(same-parity 2 3 4 5 6 7)
