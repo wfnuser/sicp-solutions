@@ -9,6 +9,7 @@
         cons (p x) y
     )) '() sequence))
 
+; lisp 里的initial应该是放在整个处理过程的最后的，当然他是首先被执行的，和函数递归的方式相关
 (define (append seq1 seq2) 
     (accumulate cons seq2 seq1))
 
