@@ -10,7 +10,7 @@
 (define (horner-eval x coefficient-sequence)
     (accumulate 
         (lambda (this-coeff higher-terms) 
-            ; + (* this-coeff x) higher-terms
+            ; (+ (* this-coeff x) higher-terms)
             ; 上面的是我本来写的，说明对accumulate的操作还是没有完全理解
             (+ this-coeff (* x higher-terms))
         ) 
