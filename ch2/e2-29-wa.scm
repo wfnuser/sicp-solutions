@@ -36,3 +36,14 @@
 (define mobile (make-mobile (make-branch 10 20) (make-branch 10 25)))
 
 (total-weight mobile)
+
+(define (if-balanced? tree)
+    (let ((left (left-branch tree)) (right (right-branch tree)))
+        (if  (not ( = (branch-weight left) (branch-weight right))
+            (#f)
+            (and (if-balanced? (branch-structure left)) (if-balanced? (branch-structure right)))
+        )
+    )
+)
+
+(if-balanced? mobile)
