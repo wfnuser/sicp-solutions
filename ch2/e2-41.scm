@@ -24,6 +24,7 @@
     )
 )
 
+; 为了避免不必要的过滤 我选择了相对复杂的实现
 (define (all-triples n)
     (flat-map (lambda (i)
         (if (<= i 2)
