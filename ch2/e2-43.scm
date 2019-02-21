@@ -1,8 +1,1 @@
-(define (up-split painter n)
-    (if (= n 0)
-        painter
-        (let ((up (up-split painter (- n 1))))
-            (below painter (beside up up))
-        )
-    )
-)
+please reference http://wiki.drewhess.com/wiki/SICP_exercise_2.43
