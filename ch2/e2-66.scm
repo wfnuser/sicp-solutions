@@ -1,9 +1,20 @@
-(define (intersection-tree tree another)
-    (list->tree
-        (intersection-set (tree->list-2 tree)
-                          (tree->list-2 another))))
+(define (entry binary-tree)
+    (car binary-tree)
+)
 
-(define (union-tree tree another)
-        (list->tree
-            (union-set (tree->list-2 tree)
-                            (tree->list-2 another))))
+(define (left binary-tree)
+    (cadr binary-tree)
+)
+
+(define (right binary-tree)
+    (caddr binary-tree)
+)
+
+(define (lookup given-key binary-tree)
+    (cond ((null? binary-tree) #f)
+        ((equal? given-key (entry binary-tree)) #t)
+        ((> given-key (entry binary-tree)) (lookup given-key (right binary-tree)))
+        ((< given-key (entry binary-tree)) (lookup given-key (left binary-tree)))
+    )
+)
+
