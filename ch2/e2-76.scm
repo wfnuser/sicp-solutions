@@ -1,0 +1,2 @@
+; message-passing style is appropriate for system in which new types must often be added
+; data-directed style is both appropriate for systems in which new types must often be added and in which new operations must often be added
