@@ -1,0 +1,1 @@
+; the complex package doesn't has magnitude operation
