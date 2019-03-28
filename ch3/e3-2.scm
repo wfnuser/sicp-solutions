@@ -1,0 +1,17 @@
+(define (make-monitored func)
+    (let ((times 0))
+        (lambda (x) 
+            (cond ((number? x) (begin (set! times (+ times 1)) (func x)))
+                ((eq? x 'how-many-calls? ) times))
+        )
+    )
+)
+
+(define s (make-monitored sqrt))
+
+(s 100)
+(s 'how-many-calls?)
+(s 4)
+(s 16)
+(s 64)
+(s 'how-many-calls?)
