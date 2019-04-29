@@ -1,0 +1,1 @@
+; When two exchanges happened concurrently; they will both try to get the smaller account id first.
