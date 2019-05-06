@@ -2,7 +2,6 @@
 (define integers
     (cons-stream 1 (add-streams ones integers)))
 
-(define s 
-    (cons-stream 1 
-            (mul-streams s (stream-cdr integers))
-    ))
+
+(define (partial-sums s) 
+   (add-streams s (cons-stream 0 (partial-sums s)))) 
