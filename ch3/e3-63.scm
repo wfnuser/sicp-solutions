@@ -1,0 +1,1 @@
+; Louis' version need to evaluate the sqrt-stream everytime, but we can get the computed result by memo-proc
