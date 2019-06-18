@@ -1,0 +1,12 @@
+(controller
+ (assign n (const 10))
+ (assign ans (const 1))
+ test-equal-0
+   (test (op =) (reg n) (const 0))
+   (branch (label factorial-done))
+   (assign t (op *) (reg ans) (reg n))
+   (assign ans (reg t))
+   (assign t (op -) (reg n) (const 1))
+   (assign n t)
+   (goto (label test-equal-0))
+ factorial-done)
